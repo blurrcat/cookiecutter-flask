@@ -3,15 +3,9 @@ machine:
     version: 3.4.2
 
 dependencies:
-  pre:
-    - pip install -U pip
   override:
     - make install
 
 test:
   override:
     - make test
-  post:
-    - cp -r htmlcov $CIRCLE_ARTIFACTS
-    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
-    - cp .pytest.xml $CIRCLE_TEST_REPORTS/junit/

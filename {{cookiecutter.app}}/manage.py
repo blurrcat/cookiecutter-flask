@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from flask.ext.script import Manager, Shell
-from manstein.app import create_app
+from {{cookiecutter.app}}.app import create_app
 
 app = create_app()
 manager = Manager(app)

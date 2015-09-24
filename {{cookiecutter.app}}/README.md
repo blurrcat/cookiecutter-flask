@@ -1,4 +1,4 @@
-# Manstein
+# {{cookiecutter.app}}
 
 ## Setup development environment
 
@@ -10,11 +10,11 @@ python3, pip and virtualenv.
 1. create and activate virtualenv, upgrade pip:
 
     ```
-    virtualenv -p `which python3` ~/.virtualenvs/manstein
-    ~/.virtualenvs/manstein/bin/activate
+    virtualenv -p `which python3` ~/.virtualenvs/{{cookiecutter.app}}
+    ~/.virtualenvs/{{cookiecutter.app}}/bin/activate
     pip install -U pip
     ```
-    
+
 2. install dependencies:
 
     ```
@@ -26,7 +26,7 @@ python3, pip and virtualenv.
     ```
     make test
     ```
-    
+
 4. run!
 
     ```

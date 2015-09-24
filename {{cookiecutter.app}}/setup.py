@@ -17,7 +17,7 @@ for env in ('prod', 'dev'):
 
 
 setup(
-    name='manstein',
+    name='{{cookiecutter.app}}',
     version=__version__,
     packages=find_packages(),
     install_requires=dependencies['prod'],

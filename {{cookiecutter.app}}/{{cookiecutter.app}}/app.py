@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from flask import Flask
-from manstein import config
-from manstein.utils import config_from_env
+from {{cookiecutter.app}} import config
+from {{cookiecutter.app}}.utils import config_from_env
 
 
 def configure_app(app, **kwargs):
     # default configuration
     app.config.from_object(config)
-    app.config.update(config_from_env('MANSTEIN_'))
+    app.config.update(config_from_env('{{cookiecutter.app.upper()}}_'))
     app.config.update(kwargs)
 
 

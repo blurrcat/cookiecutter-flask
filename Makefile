@@ -1,42 +1,16 @@
-.PHONY: clean-pyc clean-build clean-git install test coverage testdb devdb syncdb
+.PHONY: clean install test
 
 help:
-	@echo "clean-build - remove build artifacts"
-	@echo "clean-pyc - remove Python file artifacts"
-	@echo "clean-git - clean git branches"
+	@echo "clean - remove test artifacts"
 	@echo "install - install python dependencies"
-	@echo "run - run server in debug mode"
-	@echo "test - run tests with coverage"
-	@echo "testing - watch file changes and constantly run tests"
+	@echo "test - run test"
 
-clean: clean-build clean-pyc
-
-clean-build:
-	rm -fr build/
-	rm -fr dist/
-	rm -fr *.egg-info
-	rm -fr pytest.xml
-	rm -fr htmlcov
-
-clean-pyc:
-	find . -name '__pycache__' -exec rm -rf {} +
-	find . -name '*.pyc' -exec rm -f {} +
-	find . -name '*.pyo' -exec rm -f {} +
-	find . -name '*~' -exec rm -f {} +
+clean:
+	rm -fr forest_owlet
 
 install: clean
-	pip install -e .[dev]
-
-run:
-	./manage.py runserver -p 5050 --debug
+	pip install cookiecutter
 
 test: clean
-	coverage run --branch --source manstein -m py.test tests --junitxml=.pytest.xml
-	@coverage html
-	@echo "open htmlcov/index.html for coverage report"
-
-coverage:
-	@coverage report
-
-testing: clean
-	py.test -f
+	cookiecutter --no-input .
+	cd forest_owlet && make install && make test

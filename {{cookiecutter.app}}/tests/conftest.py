@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import pytest
-from manstein.app import create_app
+from {{cookiecutter.app}}.app import create_app
 
 
 TEST_CONFIG = {
