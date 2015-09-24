@@ -1,5 +1,7 @@
 cookiecutter-flask
 ==================
+.. image:: https://circleci.com/gh/blurrcat/cookiecutter-flask.svg?style=svg
+    :target: https://circleci.com/gh/blurrcat/cookiecutter-flask
 
 An unopinionated Flask project template for cookiecutter_.
 
