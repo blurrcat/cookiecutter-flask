@@ -15,7 +15,7 @@ for env in ('prod', 'dev'):
                 requires.append(line)
     dependencies[env] = requires
 
-with open('README.md') as f:
+with open('README.rst') as f:
     readme = f.read()
 
 

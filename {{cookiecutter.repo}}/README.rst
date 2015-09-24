@@ -1,6 +1,8 @@
-# {{cookiecutter.app}}
+{{cookiecutter.app}}
+{{ '#' * cookiecutter.app|length }}
 
-## Setup development environment
+Setup development environment
+-----------------------------
 
 We keep things simple.
 
