@@ -12,6 +12,13 @@ def configure_app(app, **kwargs):
     app.config.update(kwargs)
 
 
+def configure_views(app):
+    # configure views/blueprints here
+    @app.route('/')
+    def index():
+        return '<body>hi!</body>'
+
+
 def configure_extensions(app):
     try:
         from flask.ext.debugtoolbar import DebugToolbarExtension
@@ -25,6 +32,7 @@ def create_app(**kwargs):
     app = Flask(__name__)
     configure_app(app, **kwargs)
     configure_extensions(app)
+    configure_views(app)
     return app
 
 

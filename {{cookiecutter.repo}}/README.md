@@ -4,9 +4,6 @@
 
 We keep things simple.
 
-Sqlite is used in development so no hassle. The only system dependencies are
-python3, pip and virtualenv.
-
 1. create and activate virtualenv, upgrade pip:
 
     ```

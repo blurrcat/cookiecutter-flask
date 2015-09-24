@@ -1,7 +1,7 @@
 {
-  "repo": "forest-owlet",
-  "app": "forest_owlet",
+  "repo": "project",
+  "app": "project",
   "author": "blurrcat",
   "email": "blurrcat@gmail.com",
-  "project_short_description": "Awesome Flask"
+  "project_short_description": "Simple is better than complex"
 }
