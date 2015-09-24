@@ -1,0 +1,8 @@
+-r prod.txt
+
+coverage==3.7.1
+pytest==2.8.0
+pytest-xdist
+ipython
+readline
+Flask-DebugToolbar
